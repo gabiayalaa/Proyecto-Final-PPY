@@ -1,5 +1,5 @@
 const ACCESS_TOKEN =
-"ya29.a0AfB_byCemsbklTxn7EortLXs_Qu909f5moQX-DBRztAbAJ-2eIEOH2DYpseWhyvKnP8JL6zclP8R14haVVhckruG5kwX86DeD0RG04F-Hm03YaQbtpdAW-zlo-lUEtAk_ObmoF_FsKBcPzUNChboqUNlhsn9io63OlGnaCgYKAaoSARMSFQHGX2MiV3mbwecut0tx8Aj7SJKhlA0171" 
+"ya29.a0AfB_byD_1gUl8s6Ph4BQa9t2JN2M5ymYT9675j5gkRtxuZRWC7hpMAaLCzcRRfMHGxSK3svAWsetTVYgEHpMUPdBnhR7cmqe8xiiPGqWfZlIJs8aEosCOlba1VNA9Ie40ix-yU6D1TJ9CA7CdY6vZqvuYqhDKl2fvrwJaCgYKAcwSARMSFQHGX2Miu2FcUBzEvpiFwnVr58DiHg0171" 
  
 const SHEET_ID = "10MgewTIvBgKTlA_qyAqfChq5E6EQNI1hJ16WWSXRZ04"
 
@@ -33,7 +33,7 @@ function onRegistrar() {
 
   //Invocamos al método POST de la API
   fetch(
-    "https://sheets.googleapis.com/v4/spreadsheets/10MgewTIvBgKTlA_qyAqfChq5E6EQNI1hJ16WWSXRZ04/values/registros:append?valueInputOption=USER_ENTERED",
+    "https://sheets.googleapis.com/v4/spreadsheets/10MgewTIvBgKTlA_qyAqfChq5E6EQNI1hJ16WWSXRZ04/values/registros!A2:Eappend?valueInputOption=USER_ENTERED",
     {
       method: 'POST',
       headers: {
@@ -43,7 +43,7 @@ function onRegistrar() {
       body: JSON.stringify(data)
     }
   ).then(function (response) {
-    response.json().then(function (data) {
+    response.json().then(function (_data) {
 
     });
   });
